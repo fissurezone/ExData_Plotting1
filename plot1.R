@@ -1,3 +1,8 @@
+# Download and unzip dataset
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip",
+              "household_power_consumption.zip", mode="wb")
+unzip("household_power_consumption.zip")
+
 # Read dataset lines 66637 to 69516 for data of days 01/02/2007 - 02/02/2007
 header <- read.table("household_power_consumption.txt", nrows=1, header=F,
                      sep=';', stringsAsFactors=F)
