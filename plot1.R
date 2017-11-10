@@ -4,8 +4,6 @@ header <- read.table("household_power_consumption.txt", nrows=1, header=F,
 powerdata <- read.table("household_power_consumption.txt", sep=";",
                         na.strings=c("?", ""), skip=66636, nrows=2880)
 colnames(powerdata) <- header
-powerdata$TimeStamp <- strptime(paste(powerdata$Date, powerdata$Time),
-                                "%d/%m/%Y %H:%M:%S", tz="GMT")
 
 # Start png graphic device
 png(filename="plot1.png")
