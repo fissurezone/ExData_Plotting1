@@ -25,7 +25,8 @@ plot(powerdata$TimeStamp, powerdata$Voltage, type="l", xlab="datetime", ylab="Vo
 plot(powerdata$TimeStamp, powerdata$Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
 lines(powerdata$TimeStamp, powerdata$Sub_metering_2, type="l", col="red")
 lines(powerdata$TimeStamp, powerdata$Sub_metering_3, type="l", col="blue")
-legend("topright", legend=colnames(powerdata)[7:9], col=c("black", "red", "blue"), lty=rep(1, 3))
+legend("topright", legend=colnames(powerdata)[7:9], col=c("black", "red", "blue"), lty=rep(1, 3),
+       bty="n")
 
 plot(powerdata$TimeStamp, powerdata$Global_reactive_power, type="l", xlab="datetime",
      ylab="Global_reactive_power")
